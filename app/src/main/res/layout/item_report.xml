@@ -1,0 +1,86 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="#F4F4F4"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <!-- First Layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/forceCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="67 N"
+                android:textSize="24sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="#23005B" />
+
+            <TextView
+                android:id="@+id/reportDetails1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PEAK FORCE"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="14sp"
+                android:textColor="#5321CA" />
+        </LinearLayout>
+
+        <!-- Second Layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/getStarted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_white"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/muscleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="THIGH MUSCLE LEFT"
+                    android:textColor="#000"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/recycle_chart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

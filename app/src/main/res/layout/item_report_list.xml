@@ -1,0 +1,87 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="#fff"
+    app:cardUseCompatPadding="false"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/testCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEST 1"
+                android:textSize="16sp"
+                android:textColor="#C45673"
+                android:fontFamily="@font/poppinsmedium" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Rep : "
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="#7B6F72"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/RepCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="#7B6F72"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MUSCLE COVERED "
+                android:textSize="10sp"
+                android:textColor="#7B6F72"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="end"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/musclesCovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26%"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#23005B"
+                android:gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

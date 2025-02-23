@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- chip_item.xml -->
+<com.google.android.material.chip.Chip
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?attr/textAppearanceBody1"
+    android:textColor="#FFFFFF"
+    android:textSize="12sp"
+    app:chipBackgroundColor="#C45673"
+    app:chipCornerRadius="10dp"
+    app:chipEndPadding="10dp"
+    app:chipStartPadding="10dp"
+    app:chipStrokeWidth="1dp"
+    app:closeIconSize="18dp"
+    app:closeIconVisible="true"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>

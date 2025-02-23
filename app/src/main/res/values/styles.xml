@@ -1,0 +1,18 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- Custom Button Style for DatePickerDialog -->
+    <style name="CustomDatePickerButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">#7075DB</item> <!-- Button background color -->
+        <item name="android:textColor">#FFFFFF</item> <!-- Button text color -->
+    </style>
+
+    <!-- Custom DatePickerDialog Theme -->
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:background">#FF5C5F</item> <!-- Dialog background color -->
+        <item name="android:textColorPrimary">#FFFFFF</item> <!-- Primary text color -->
+        <item name="android:textColorSecondary">#FFFFFF</item> <!-- Secondary text color -->
+        <item name="android:buttonStyle">@style/CustomDatePickerButton</item> <!-- Apply custom button style -->
+    </style>
+
+
+</resources>

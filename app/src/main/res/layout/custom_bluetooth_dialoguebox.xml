@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/white_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SELECT DEVICE"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsbold"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/close_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top"
+            android:src="@drawable/baseline_close_24"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hand_held"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <!-- Left Section: Text Content -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dialog_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HAND HELD\nDYNAMOMETER"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Dynamo - XR"
+                    android:textSize="8sp"
+                    android:textColor="@color/black"
+                    android:translationY="-20dp"
+                    android:gravity="end|bottom"/>
+            </LinearLayout>
+
+            <!-- Right Section: Image -->
+            <ImageView
+                android:id="@+id/dialog_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hand_held"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pinch_held"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <!-- Left Section: Text Content -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PINCH \nDYNAMOMETER"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Dynamo - ADX"
+                    android:textSize="8sp"
+                    android:textColor="@color/black"
+                    android:translationY="-20dp"
+                    android:gravity="end|bottom"/>
+            </LinearLayout>
+
+            <!-- Right Section: Image -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pinch_held"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

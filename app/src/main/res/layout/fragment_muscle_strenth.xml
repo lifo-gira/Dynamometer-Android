@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/front_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top">
+
+        <ImageView
+            android:id="@+id/image_body"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/blank_front_anatomy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/right_pec"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="49dp"
+            android:visibility="gone"
+            android:src="@drawable/right_pec" />
+
+        <ImageView
+            android:id="@+id/left_pec"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="49dp"
+            android:visibility="gone"
+            android:src="@drawable/left_pec" />
+
+        <ImageView
+            android:id="@+id/left_obliques"
+            android:layout_width="35dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="112.5dp"
+            android:src="@drawable/left_obliques" />
+
+        <ImageView
+            android:id="@+id/right_obliques"
+            android:layout_width="35dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="152dp"
+            android:src="@drawable/right_obliques" />
+
+        <ImageView
+            android:id="@+id/abs"
+            android:layout_width="55dp"
+            android:visibility="gone"
+            android:layout_height="72dp"
+            android:layout_marginStart="122dp"
+            android:layout_marginTop="81dp"
+            android:src="@drawable/abs" />
+
+        <ImageView
+            android:id="@+id/right_biceps"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/right_biceps" />
+
+        <ImageView
+            android:id="@+id/left_biceps"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/left_biceps" />
+
+        <ImageView
+            android:id="@+id/right_hip"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="123dp"
+            android:src="@drawable/right_hip" />
+
+        <ImageView
+            android:id="@+id/left_hip"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="123.5dp"
+            android:src="@drawable/left_hip" />
+
+        <ImageView
+            android:id="@+id/right_thigh"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="123dp"
+            android:visibility="gone"
+            android:src="@drawable/right_thigh" />
+
+        <ImageView
+            android:id="@+id/left_thigh"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="115dp"
+            android:visibility="gone"
+            android:layout_marginTop="123dp"
+            android:src="@drawable/left_thigh" />
+
+        <!-- Arms and legs can be similarly anchored to head and torso -->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/back_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/blank_back_anatomy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/right_traps"
+            android:layout_width="45dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/right_traps" />
+
+        <ImageView
+            android:id="@+id/left_traps"
+            android:layout_width="45dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/left_traps" />
+
+        <ImageView
+            android:id="@+id/right_deltoids"
+            android:layout_width="34dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="166dp"
+            android:layout_marginTop="52.5dp"
+            android:src="@drawable/right_deltoids" />
+
+        <ImageView
+            android:id="@+id/left_deltoids"
+            android:layout_width="34dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="101dp"
+            android:layout_marginTop="52.5dp"
+            android:src="@drawable/left_deltoids" />
+
+        <ImageView
+            android:id="@+id/right_lat"
+            android:layout_width="55dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="139.5dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/right_lat" />
+
+        <ImageView
+            android:id="@+id/left_lat"
+            android:layout_width="55dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/left_lat" />
+
+        <ImageView
+            android:id="@+id/left_triceps"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="67dp"
+            android:src="@drawable/left_triceps" />
+
+        <ImageView
+            android:id="@+id/right_triceps"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="172dp"
+            android:layout_marginTop="67dp"
+            android:src="@drawable/right_triceps" />
+
+        <ImageView
+            android:id="@+id/right_hamstring"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="158dp"
+            android:src="@drawable/right_hamstring" />
+
+        <ImageView
+            android:id="@+id/left_hamstring"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="158dp"
+            android:src="@drawable/left_hamstring" />
+
+        <ImageView
+            android:id="@+id/right_glutes"
+            android:layout_width="50dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/right_glutes" />
+
+        <ImageView
+            android:id="@+id/left_glutes"
+            android:layout_width="50dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/left_glutes" />
+
+        <ImageView
+            android:id="@+id/right_calves"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginTop="205dp"
+            android:src="@drawable/right_calves" />
+
+        <ImageView
+            android:id="@+id/left_calves"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="205dp"
+            android:src="@drawable/left_calves" />
+
+        <!-- Arms and legs can be similarly anchored to head and torso -->
+
+    </FrameLayout>
+
+</FrameLayout>

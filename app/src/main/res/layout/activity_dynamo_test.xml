@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".DynamoTest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Bar with Image, Text, and Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Left Image -->
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/boxed_back_button" />
+
+            <!-- Center Text -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="DynamoTest"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Right Image -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/menu_button" />
+
+        </LinearLayout>
+
+        <!-- Two Side-by-Side Layouts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <!-- Left Layout -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Left Image -->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_profile" />
+
+                <!-- Text Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <!-- Top Text -->
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Ronald Shaw"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <!-- Bottom Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="NEW TEST"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- Right Layout -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <LinearLayout
+                    android:id="@+id/getStarted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_curved_button"
+                    android:gravity="center"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="SELECT"
+                        android:textColor="#FFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+            <!-- Circular Progress View on top of the Image -->
+            <com.example.dynamopush.CircularProgressView
+                android:id="@+id/circularProgressView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/toggleImage"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/speedometer" />
+
+            <!-- LinearLayout for TextViews in the top-right corner -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="REP  :"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/repCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="01"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/toggleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_curved_button"
+                    android:gravity="center"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="6dp">
+
+                    <TextView
+                        android:id="@+id/toggleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Gauge"
+                        android:textColor="#FFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:letterSpacing="0.2"
+            android:text="FORCE"
+            android:textColor="#B3B3B3"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- TextView for the number -->
+            <TextView
+                android:id="@+id/forceCountNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="_"
+                android:textColor="#000000"
+                android:textSize="70sp" />
+
+            <!-- TextView for the unit "N" -->
+            <TextView
+                android:id="@+id/forceCountUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Kgf"
+                android:textColor="#C45673"
+                android:textSize="70sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <!-- First inner LinearLayout -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="30dp"
+                android:orientation="vertical">
+
+                <!-- Add views inside the first LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/selected_muscle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT YOUR MUSCLE"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="("
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/onProgressMuscle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/totalMuscleSelected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=")"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:translationX="-20dp"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <!-- Second inner LinearLayout -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Add views inside the second LinearLayout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_background"
+                    android:orientation="vertical"
+                    android:paddingVertical="25dp"
+                    android:paddingHorizontal="16dp">
+
+                    <!-- First Image (Top) -->
+                    <ImageView
+                        android:id="@+id/start_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_play_arrow_24" />
+
+                    <!-- Second Image (Center) -->
+                    <ImageView
+                        android:id="@+id/next_exercise"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/next_exercise" />
+
+                    <ImageView
+                        android:id="@+id/back_exercise"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/back_exercise" />
+
+                    <!-- Third Image (Bottom) -->
+                    <ImageView
+                        android:id="@+id/end_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_stop_24"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
