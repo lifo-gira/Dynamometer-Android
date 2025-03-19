@@ -363,7 +363,7 @@ public class Report extends AppCompatActivity {
     private int getHeatmapColor(float maxForce) {
         // Define force thresholds (adjust as needed)
         float minForce = 0;
-        float maxForceThreshold = 11.1f; // Adjust based on your max values
+        float maxForceThreshold = 60f; // Adjust based on your max values
 
         float normalizedForce = (maxForce - minForce) / (maxForceThreshold - minForce);
         normalizedForce = Math.max(0, Math.min(1, normalizedForce)); // Keep within 0-1 range

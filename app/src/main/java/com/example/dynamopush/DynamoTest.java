@@ -53,6 +53,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -709,8 +711,21 @@ public class DynamoTest extends AppCompatActivity {
             Log.d("SessionData", sessionDataJsonArray.toString());
 
             // Define API URL
-//            String url = "https://dynamometer-api.onrender.com/upload-exercise/?email="+email+"&first_name="+firstName+"&last_name"+lastName;
-            String url = "https://dynamometer-api.onrender.com/upload-exercise/?email=anirudh20017%40gmail.com&first_name=anirudh&last_name=menon";
+            String url = "";
+            try {
+                String encodedEmail = URLEncoder.encode(email, StandardCharsets.UTF_8.toString());
+                String encodedFirstName = URLEncoder.encode(firstName, StandardCharsets.UTF_8.toString());
+                String encodedLastName = URLEncoder.encode(lastName, StandardCharsets.UTF_8.toString());
+
+               url = "https://dynamometer-api.onrender.com/upload-exercise/?email=" + encodedEmail
+                        + "&first_name=" + encodedFirstName
+                        + "&last_name=" + encodedLastName;
+
+                Log.e("Final API URL", url);
+            } catch (Exception e) {
+                Log.e("Encoding Error", e.getMessage());
+            }
+//            String url = "https://dynamometer-api.onrender.com/upload-exercise/?email=anirudh20017%40gmail.com&first_name=anirudh&last_name=menon";
             // Send sessionDataJsonArray directly
             JsonArrayRequest jsonSessionUpload = new JsonArrayRequest(
                     Request.Method.POST, url, sessionDataJsonArray,
